@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <script src="index.js"></script>    
+    <title>Encriptador y Desencriptador de Texto</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="Img/Logo.png">
+        <section class="encriptar">
+        <textarea type="text" id="texto" cols="30" rows="10"oninput="this.value = this.value.replace(/[A-ZÁÉÍÓÚÜÑ]/g, '').replace(/[^\w\s]/gi, '')") placeholder="Ingrese el texto aquí"></textarea>
+        <p class="terminos"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2"/></svg> Solo letras minúsculas y sin acentos</p>
+        <div class="botones">
+        <button onclick="encriptar()" class="botonEncriptar">Encriptar</button>
+        <button onclick="desencriptar()"class="botonDesencriptar">Desencriptar</button>
+        </section>
+
+    <div class="encriptado">
+    <div id="resultado">
+        <img src="Img/Muñeco.png" class="imagen">
+        <h2>Ningun mensaje fue encontrado</h2>
+        <p>ingresa el texto que deseas encriptar o desencriptar</p>
+        </div>  
+        <div><button onclick="copiar()"class= "botonCopiar">Copiar</button></div>
+    </div>
+    
+</body>
+</html>
